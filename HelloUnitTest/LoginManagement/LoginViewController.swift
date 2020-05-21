@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let presenter = LoginPresenter()
+    let presenter = LoginPresenter(api: UserApi())
     
     override func viewDidLoad() {
         super.viewDidLoad()

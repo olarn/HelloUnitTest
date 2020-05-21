@@ -8,14 +8,34 @@
 
 import Quick
 import Nimble
+@testable import HelloUnitTest
+
+class FakeUserApi: UserApiProtocol {
+    func getUser() -> User {
+        return User(userName: "user@email.com", password: "1234")
+    }
+}
 
 class LoginUnitTests: QuickSpec {
     override func spec() {
         describe("Test login") {
             
             it("should login success with username = user@email.com & password = 1234") {
-                expect(true).to(equal(false))
+
+                let loginPresenter = LoginPresenter(api: FakeUserApi())
+                
+                let expectedLoginResult = true
+                let actualLoginResult = loginPresenter.validate(userName: "user@email.com", andPassword: "1234")
+
+                expect(actualLoginResult).to(equal(expectedLoginResult))
             }
+
+            
+            
+            
+            
+            
+            
             
             it("should login fail if use not exist username (noone@email.com)") {
                 expect(true).to(equal(false))

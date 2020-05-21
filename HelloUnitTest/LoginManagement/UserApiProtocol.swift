@@ -1,5 +1,5 @@
 //
-//  LoginPresenter.swift
+//  UserApi.swift
 //  HelloUnitTest
 //
 //  Created by Olarn U. on 21/5/2563 BE.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class LoginPresenter {
-    
+protocol UserApiProtocol {
+    func getUser() -> User
 }
