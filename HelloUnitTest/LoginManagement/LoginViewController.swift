@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     let presenter = LoginPresenter(api: UserApi())
     
@@ -19,7 +20,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    
+    @IBAction func inputTextValueChanged(_ sender: Any) {
+        presenter.validateButtonState(
+            userName: loginTextField.text ?? "",
+            andPassword: passwordTextField.text ?? "") { state in
+                loginButton.isEnabled = state
+        }
+    }
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         
         let loginSuccess = presenter.validate(

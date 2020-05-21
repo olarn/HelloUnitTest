@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias LoginUIValidationType = (Bool) -> Void
+
 class LoginPresenter {
     
     let api: UserApiProtocol
@@ -21,5 +23,17 @@ class LoginPresenter {
         return
             userName == user.userName &&
             password == user.password
+    }
+
+    func validateButtonState(userName: String, andPassword password: String, validationCallback: LoginUIValidationType) {
+        validationCallback(isEmail(userName) && isStrongPassword(password))
+    }
+
+    private func isEmail(_ userName: String) -> Bool {
+        return userName.count == 3
+    }
+        
+    private func isStrongPassword(_ password: String) -> Bool {
+        return password.count == 3
     }
 }
