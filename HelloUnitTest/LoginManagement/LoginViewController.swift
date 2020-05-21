@@ -22,6 +22,27 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         
+        let loginSuccess = presenter.validate(
+            userName: loginTextField.text ?? "",
+            andPassword: passwordTextField.text ?? "")
+        
+        if loginSuccess {
+            // goto main screen
+            
+        } else {
+            let alert = UIAlertController(
+                title: "Login Fail",
+                message: "Invalid Username and/or Password",
+                preferredStyle: .alert)
+            
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

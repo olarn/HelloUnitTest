@@ -16,33 +16,42 @@ class FakeUserApi: UserApiProtocol {
     }
 }
 
+class FakeNotExistUserApi: UserApiProtocol {
+    func getUser() -> User {
+        return User(userName: "", password: "")
+    }
+}
+
+
 class LoginUnitTests: QuickSpec {
     override func spec() {
         describe("Test login") {
             
             it("should login success with username = user@email.com & password = 1234") {
-
                 let loginPresenter = LoginPresenter(api: FakeUserApi())
-                
+
                 let expectedLoginResult = true
                 let actualLoginResult = loginPresenter.validate(userName: "user@email.com", andPassword: "1234")
 
                 expect(actualLoginResult).to(equal(expectedLoginResult))
             }
+            
+            it("should login fail if user not exist username (noone@email.com)") {
+                let loginPresenter = LoginPresenter(api: FakeNotExistUserApi())
 
-            
-            
-            
-            
-            
-            
-            
-            it("should login fail if use not exist username (noone@email.com)") {
-                expect(true).to(equal(false))
+                let expectedLoginResult = false
+                let actualLoginResult = loginPresenter.validate(userName: "noone@email.com", andPassword: "1234")
+                
+                expect(actualLoginResult).to(equal(expectedLoginResult))
             }
             
             it("should login fail if enter invalid password for username = user@email.com (password = 0000)") {
-                expect(true).to(equal(false))
+                let loginPresenter = LoginPresenter(api: FakeUserApi())
+                
+                let expectedLoginResult = false
+                let actualLoginResult = loginPresenter.validate(userName: "user@email.com", andPassword: "0000")
+
+                expect(actualLoginResult).to(equal(expectedLoginResult))
             }
         }
     }
