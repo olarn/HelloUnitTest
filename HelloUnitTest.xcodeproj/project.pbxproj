@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,9 @@
 		370B0C2F24762093006A5794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370B0C2D24762093006A5794 /* Main.storyboard */; };
 		370B0C3124762095006A5794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370B0C3024762095006A5794 /* Assets.xcassets */; };
 		370B0C3424762095006A5794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370B0C3224762095006A5794 /* LaunchScreen.storyboard */; };
-		370B0C3F24762095006A5794 /* HelloUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B0C3E24762095006A5794 /* HelloUnitTestTests.swift */; };
+		370B0C4A24762EB0006A5794 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B0C4924762EB0006A5794 /* LoginPresenter.swift */; };
+		370B0C4C24762FD2006A5794 /* LoginUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B0C4B24762FD2006A5794 /* LoginUnitTests.swift */; };
+		3771A8472476306300A5A6E2 /* HelloUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */; };
 		752D39A3DE66F157A0E8D95E /* Pods_HelloUnitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EBCBFFCDBB76AE1038869A /* Pods_HelloUnitTest.framework */; };
 		9F595AEE9877017BCBE9C128 /* Pods_HelloUnitTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE94873C1510D8313943FF6 /* Pods_HelloUnitTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,8 +40,10 @@
 		370B0C3324762095006A5794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370B0C3524762095006A5794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370B0C3A24762095006A5794 /* HelloUnitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloUnitTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		370B0C3E24762095006A5794 /* HelloUnitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloUnitTestTests.swift; sourceTree = "<group>"; };
 		370B0C4024762095006A5794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370B0C4924762EB0006A5794 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		370B0C4B24762FD2006A5794 /* LoginUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnitTests.swift; sourceTree = "<group>"; };
+		3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloUnitTestTests.swift; path = ../../../.Trash/HelloUnitTestTests.swift; sourceTree = "<group>"; };
 		497C8A4809BE94B81730A72D /* Pods-HelloUnitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloUnitTest.debug.xcconfig"; path = "Target Support Files/Pods-HelloUnitTest/Pods-HelloUnitTest.debug.xcconfig"; sourceTree = "<group>"; };
 		6BE94873C1510D8313943FF6 /* Pods_HelloUnitTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloUnitTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EBCBFFCDBB76AE1038869A /* Pods_HelloUnitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloUnitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +80,6 @@
 				E2F38B1384113EDB53EC607F /* Pods-HelloUnitTestTests.debug.xcconfig */,
 				E1966287A566B1892330E919 /* Pods-HelloUnitTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +109,7 @@
 				370B0C2724762093006A5794 /* AppDelegate.swift */,
 				370B0C2924762093006A5794 /* SceneDelegate.swift */,
 				370B0C2B24762093006A5794 /* LoginViewController.swift */,
+				370B0C4924762EB0006A5794 /* LoginPresenter.swift */,
 				370B0C2D24762093006A5794 /* Main.storyboard */,
 				370B0C3024762095006A5794 /* Assets.xcassets */,
 				370B0C3224762095006A5794 /* LaunchScreen.storyboard */,
@@ -117,8 +121,9 @@
 		370B0C3D24762095006A5794 /* HelloUnitTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				370B0C3E24762095006A5794 /* HelloUnitTestTests.swift */,
 				370B0C4024762095006A5794 /* Info.plist */,
+				3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */,
+				370B0C4B24762FD2006A5794 /* LoginUnitTests.swift */,
 			);
 			path = HelloUnitTestTests;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 					};
 					370B0C3924762095006A5794 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 						TestTargetID = 370B0C2324762093006A5794;
 					};
 				};
@@ -300,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370B0C4A24762EB0006A5794 /* LoginPresenter.swift in Sources */,
 				370B0C2C24762093006A5794 /* LoginViewController.swift in Sources */,
 				370B0C2824762093006A5794 /* AppDelegate.swift in Sources */,
 				370B0C2A24762093006A5794 /* SceneDelegate.swift in Sources */,
@@ -310,7 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370B0C3F24762095006A5794 /* HelloUnitTestTests.swift in Sources */,
+				3771A8472476306300A5A6E2 /* HelloUnitTestTests.swift in Sources */,
+				370B0C4C24762FD2006A5794 /* LoginUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +508,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloUnitTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -510,6 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = team.odds.HelloUnitTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloUnitTest.app/HelloUnitTest";
@@ -522,6 +532,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloUnitTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
