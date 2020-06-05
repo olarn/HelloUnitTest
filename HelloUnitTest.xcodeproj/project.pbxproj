@@ -15,7 +15,6 @@
 		370B0C3424762095006A5794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370B0C3224762095006A5794 /* LaunchScreen.storyboard */; };
 		370B0C4A24762EB0006A5794 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B0C4924762EB0006A5794 /* LoginPresenter.swift */; };
 		3727E1C824765314007F6A20 /* LoginUIValidationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727E1C724765314007F6A20 /* LoginUIValidationUnitTests.swift */; };
-		3771A8472476306300A5A6E2 /* HelloUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */; };
 		3771A84924763A8000A5A6E2 /* UserApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771A84824763A8000A5A6E2 /* UserApiProtocol.swift */; };
 		3771A84B24763AB800A5A6E2 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771A84A24763AB700A5A6E2 /* UserApi.swift */; };
 		3771A84D24763B8400A5A6E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771A84C24763B8400A5A6E2 /* User.swift */; };
@@ -48,7 +47,6 @@
 		370B0C4924762EB0006A5794 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		370B0C4B24762FD2006A5794 /* LoginValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationUnitTests.swift; sourceTree = "<group>"; };
 		3727E1C724765314007F6A20 /* LoginUIValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIValidationUnitTests.swift; sourceTree = "<group>"; };
-		3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloUnitTestTests.swift; path = ../../../.Trash/HelloUnitTestTests.swift; sourceTree = "<group>"; };
 		3771A84824763A8000A5A6E2 /* UserApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiProtocol.swift; sourceTree = "<group>"; };
 		3771A84A24763AB700A5A6E2 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		3771A84C24763B8400A5A6E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				370B0C4024762095006A5794 /* Info.plist */,
-				3771A8462476306300A5A6E2 /* HelloUnitTestTests.swift */,
 				370B0C4B24762FD2006A5794 /* LoginValidationUnitTests.swift */,
 				3727E1C724765314007F6A20 /* LoginUIValidationUnitTests.swift */,
 			);
@@ -340,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3771A8472476306300A5A6E2 /* HelloUnitTestTests.swift in Sources */,
 				3771A85224763E3B00A5A6E2 /* LoginValidationUnitTests.swift in Sources */,
 				3727E1C824765314007F6A20 /* LoginUIValidationUnitTests.swift in Sources */,
 			);
